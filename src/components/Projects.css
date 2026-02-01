@@ -1,0 +1,41 @@
+.typewriter-text {
+    margin-left: 15px;
+}
+
+.body-text {
+    flex: 0 0 50%;
+    overflow-y: auto;
+}
+
+.project-title {
+    color: #050f58;
+}
+
+/* In your Projects.css */
+.content-split {
+    display: flex;
+    height: calc(100vh - 60px);
+    /* Adjust based on your title bar height */
+}
+
+.text-content {
+    flex: 0 0 50%;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.images-content {
+    flex: 0 0 50%;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.projects-window button {
+    font-size: 16px;
+    padding: 10px 20px;
+    min-width: 100px;
+    margin: 5px;
+}

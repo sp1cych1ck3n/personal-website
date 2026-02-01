@@ -1,0 +1,43 @@
+.intro-window {
+    font-size: 19px;
+    /* width: 890px;
+    margin: 4px; */
+}
+
+.shape-border {
+    width: 210px;
+    height: 265px;
+    margin-left: -8px;
+    margin-top: -6.5px;
+    border: 2px solid #2541f1;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.picture-window {
+    width: 215px;
+    height: 300px;
+    margin: 40px;
+    border: 2px solid #2541f1;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.intro-title {
+    font-size: 20px;
+}
+
+.title-bar-text {
+    margin: 5px;
+}
+
+.picture {
+    animation: forwards;
+}
+
+.intro-window button {
+    font-size: 16px;
+    padding: 10px 20px;
+    min-width: 100px;
+    margin: 5px;
+}

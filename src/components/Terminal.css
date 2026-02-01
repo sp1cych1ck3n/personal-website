@@ -1,0 +1,37 @@
+/* Output text */
+.output {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    /* Preserves \n line breaks */
+    word-wrap: break-word;
+}
+
+/* Input field */
+
+.terminal-window {
+    font-size: 19px;
+    margin-top: 5px;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.button {
+    font-size: 40px;
+    margin: 5px;
+}
+
+.terminal-title {
+    font-size: 19px;
+}
+
+.terminal-window button {
+    font-size: 16px;
+    padding: 10px 20px;
+    min-width: 100px;
+    margin: 5px;
+}

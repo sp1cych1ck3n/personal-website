@@ -1,0 +1,28 @@
+.Nav {
+    padding: 100px;
+}
+
+.opener {
+    background-color: #1e1e1e;
+    color: #c5c5c5;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* Animation */
+    animation: blink 1s;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
