@@ -25,7 +25,7 @@ function Intro({ data }) {
       navigate('/contact');
     }
     else if (buttonValue === 'restart') {
-      navigate('/terminal');
+      navigate('/');
     }
     else if (buttonValue === 'back') {
       navigate(-1);
@@ -74,10 +74,11 @@ function Intro({ data }) {
         <div className="window-body">
           <div ref={outputRef} className="typewriter-text" />
         </div>
-        <button value="projects" onClick={handleNavigation}>projects</button>
-        <button value="contact" onClick={handleNavigation}>contact</button>
-        <button value="restart" onClick={handleNavigation}>restart</button>
-        <button value="back" onClick={handleNavigation}>back</button>
+        <button className="user-buttons" value="projects" onClick={handleNavigation}>projects</button>
+        <button className="user-buttons" value="contact" onClick={handleNavigation}>contact</button>
+        <button className="user-buttons" value="restart" onClick={handleNavigation}>restart</button>
+        <button className="user-buttons" value="back" onClick={handleNavigation}>back</button>
+
       </div>
 
 

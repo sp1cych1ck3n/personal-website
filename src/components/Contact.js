@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Typewriter from "typewriter-effect/dist/core";
 import "98.css";
 import './Contact.css';
+import './Intro.css';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -19,14 +20,17 @@ function Contact() {
       navigate('/projects');
     }
     else if (buttonValue === 'restart') {
-      navigate('/terminal');
+      navigate('/');
     }
     else if (buttonValue === 'back') {
       navigate(-1);
     }
   }
 
-  const contactInfo = ["school email <a href='mailto:khabibi@uwaterloo.ca'khabibi@uwaterloo.ca</a>", "personal email <a href='habibi.kiana@gmail.com'habibi.kiana@gmail.com", "phone number <a href='tel: +14167201536'416 720-1536", "linkedin <a href='https://www.linkedin.com/in/kiana-habibi/'</a>"];
+  const contact1 = "school email: <a href='mailto:khabibi@uwaterloo.ca'>khabibi@uwaterloo.ca</a><br/>";
+  const contact2 = "personal email: <a href='mailto:habibi.kiana@gmail.com'>habibi.kiana@gmail.com</a><br/>";
+  const contact3 = "phone number: <a href='tel:+14167201536'>416-720-1536</a><br/>";
+  const contact4 = "linkedin: <a href='https://www.linkedin.com/in/kiana-habibi/' target='_blank'>linkedin profile</a><br/>";
 
   useEffect(() => {
     if (outputRef.current) {
@@ -38,10 +42,11 @@ function Contact() {
         cursor: "|",
       });
 
-      const formattedText = contactInfo.join("<br/>");
-
       typewriter
-        .typeString(formattedText)
+        .typeString(contact1)
+        .typeString(contact2)
+        .typeString(contact3)
+        .typeString(contact4)
         .callFunction(() => {
         })
         .start();
@@ -60,14 +65,14 @@ function Contact() {
           <button aria-label="Close"></button>
         </div>
       </div>
-      <div className="window-body contact-body">
+      <div className="window-body intro-window">
         <div ref={outputRef} className="typewriter-text" />
       </div>
       <div contact-button>
-        <button value="about" onClick={handleNavigation}>about</button>
-        <button value="projects" onClick={handleNavigation}>projects</button>
-        <button value="restart" onClick={handleNavigation}>restart</button>
-        <button value="back" onClick={handleNavigation}>back</button>
+        <button className="user-buttons" value="about" onClick={handleNavigation}>about</button>
+        <button className="user-buttons" value="projects" onClick={handleNavigation}>projects</button>
+        <button className="user-buttons" value="restart" onClick={handleNavigation}>restart</button>
+        <button className="user-buttons" value="back" onClick={handleNavigation}>back</button>
       </div>
     </div>
   );

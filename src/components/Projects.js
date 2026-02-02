@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Intro.css';
 import Typewriter from 'typewriter-effect/dist/core';
 import './Projects.css';
@@ -10,11 +11,27 @@ console.log(project1);
 console.log(project2);
 console.log(project3);
 
-
 function Projects() {
   const outputRef = useRef(null);
   const [hasPrinted, setHasPrinted] = useState(false);
+  const navigate = useNavigate();
 
+  const handleNavigation = (event) => {
+    const buttonValue = event.currentTarget.value;
+
+    if (buttonValue === 'projects') {
+      navigate('/projects');
+    }
+    else if (buttonValue === 'contact') {
+      navigate('/contact');
+    }
+    else if (buttonValue === 'restart') {
+      navigate('/');
+    }
+    else if (buttonValue === 'back') {
+      navigate(-1);
+    }
+  }
   const projects = [
     {
       title: "waterloo engineering competition (WEC) junior design: hydraulic bridge",
@@ -86,6 +103,11 @@ function Projects() {
           <button aria-label="Close"></button>
         </div>
       </div>
+
+      <button className="user-buttons" value="projects" onClick={handleNavigation}>projects</button>
+      <button className="user-buttons" value="contact" onClick={handleNavigation}>contact</button>
+      <button className="user-buttons" value="restart" onClick={handleNavigation}>restart</button>
+      <button className="user-buttons" value="back" onClick={handleNavigation}>back</button>
 
       {/* Split content */}
       <div className="content-split">

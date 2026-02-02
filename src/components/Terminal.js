@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Terminal.css';
+import './Intro.css';
 import { useNavigate } from 'react-router-dom';
 import Typewriter from 'typewriter-effect/dist/core';
 
@@ -89,7 +90,7 @@ function Terminal({ data }) {
                 </div>
             </div>
             <div className="window terminal-window">
-                <div ref={outputRef}></div>
+                <div className="output" ref={outputRef}></div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     {!hasStarted ? (
                         <button value="continue" onClick={handleButtonInput}>
@@ -97,19 +98,19 @@ function Terminal({ data }) {
                         </button>
                     ) : (
                         <>
-                            <button value="about" onClick={handleButtonInput}>
+                            <button className="user-buttons" value="about" onClick={handleButtonInput}>
                                 about
                             </button>
-                            <button value="projects" onClick={handleButtonInput}>
+                            <button className="user-buttons" value="projects" onClick={handleButtonInput}>
                                 projects
                             </button>
-                            <button value="contact" onClick={handleButtonInput}>
+                            <button className="user-buttons" value="contact" onClick={handleButtonInput}>
                                 contact
                             </button>
-                            <button value="restart" onClick={handleButtonInput}>
+                            <button className="user-buttons" value="restart" onClick={handleButtonInput}>
                                 restart
                             </button>
-                            <button value="exit" onClick={handleButtonInput}>
+                            <button className="user-buttons" value="exit" onClick={handleButtonInput}>
                                 exit
                             </button>
                         </>)}
