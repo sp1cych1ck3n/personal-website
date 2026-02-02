@@ -55,10 +55,8 @@ function Intro({ data }) {
           setHasPrinted(true);
         })
         .start();
-
-
     }
-  }, []);
+  }, [introText1]);
   return (
     <div>
       {/* Introduction Window */}

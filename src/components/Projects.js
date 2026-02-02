@@ -10,17 +10,44 @@ import project3 from '../project3.png';
 console.log(project1);
 console.log(project2);
 console.log(project3);
+const projects = [
+  {
+    title: "waterloo engineering competition (WEC) junior design: hydraulic bridge",
+    year: "2024",
+    description: ["designed and built a hydraulically actuated bridge as part of a four-person team during WEC, delivering a fully functional prototype within an 8-hour time constraint.", "contributed to mechanical design, hydraulic system integration, and iterative testing, prioritizing structural stability, smooth actuation, and reliability under load.", "achieved a 91/100 judge evaluation, recognizing strong functionality, design quality, and effective teamwork in a high-pressure, hands-on engineering environment."
+    ]
+  },
+  {
+    title: "LEGO robotics programming project: robot dog 'byte'",
+    year: "2024",
+    description: ["programmed robotic behaviour in C++ with an emphasis on motion control and system reliability.", "applied iterative testing and debugging to refine behavior under physical constraints.", "wrote a 40+ page report depicting design constraints, planning, criteria fulfilment, and software/hardware design."
+    ]
+  },
+  {
+    title: "WEC junior design director",
+    year: "2025",
+    description: ["designed a full engineering challenge for 100+ participants across various programs and education levels, including modelling terrain the problem is based on: which is why I'm sawing!", "integrated problem modelling, prototyping, and systems-level evaluation.", "co-authored a 13-page technical package including requirements and evaluation rubrics."
+    ]
+  },
+  {
+    title: "enghacks hackathon — integrated director",
+    year: "2026",
+    description: ["co-leading the design of a winter accessibility device challenge that participants must solve using electrical, software, and hardware elements.", "selected low-cost sensors, motors, and power systems to enable feasible prototypes. prioritized inclusive design and real-world usability over theoretical solutions.", "designed rubric to test students of all undergrad levels."
+    ]
+  }
+];
 
 function Projects() {
   const outputRef = useRef(null);
   const [hasPrinted, setHasPrinted] = useState(false);
   const navigate = useNavigate();
 
+
   const handleNavigation = (event) => {
     const buttonValue = event.currentTarget.value;
 
-    if (buttonValue === 'projects') {
-      navigate('/projects');
+    if (buttonValue === 'about') {
+      navigate('/intro');
     }
     else if (buttonValue === 'contact') {
       navigate('/contact');
@@ -32,32 +59,6 @@ function Projects() {
       navigate(-1);
     }
   }
-  const projects = [
-    {
-      title: "waterloo engineering competition (WEC) junior design: hydraulic bridge",
-      year: "2024",
-      description: ["designed and built a hydraulically actuated bridge as part of a four-person team during WEC, delivering a fully functional prototype within an 8-hour time constraint.", "contributed to mechanical design, hydraulic system integration, and iterative testing, prioritizing structural stability, smooth actuation, and reliability under load.", "achieved a 91/100 judge evaluation, recognizing strong functionality, design quality, and effective teamwork in a high-pressure, hands-on engineering environment."
-      ]
-    },
-    {
-      title: "LEGO robotics programming project: robot dog 'byte'",
-      year: "2024",
-      description: ["programmed robotic behaviour in C++ with an emphasis on motion control and system reliability.", "applied iterative testing and debugging to refine behavior under physical constraints.", "wrote a 40+ page report depicting design constraints, planning, criteria fulfilment, and software/hardware design."
-      ]
-    },
-    {
-      title: "WEC junior design director",
-      year: "2025",
-      description: ["designed a full engineering challenge for 100+ participants across various programs and education levels, including modelling terrain the problem is based on: which is why I'm sawing!", "integrated problem modelling, prototyping, and systems-level evaluation.", "co-authored a 13-page technical package including requirements and evaluation rubrics."
-      ]
-    },
-    {
-      title: "enghacks hackathon — integrated director",
-      year: "2026",
-      description: ["co-leading the design of a winter accessibility device challenge that participants must solve using electrical, software, and hardware elements.", "selected low-cost sensors, motors, and power systems to enable feasible prototypes. prioritized inclusive design and real-world usability over theoretical solutions.", "designed rubric to test students of all undergrad levels."
-      ]
-    }
-  ];
 
   useEffect(() => {
     if (outputRef.current) {
@@ -104,7 +105,7 @@ function Projects() {
         </div>
       </div>
 
-      <button className="user-buttons" value="projects" onClick={handleNavigation}>projects</button>
+      <button className="user-buttons" value="about" onClick={handleNavigation}>about</button>
       <button className="user-buttons" value="contact" onClick={handleNavigation}>contact</button>
       <button className="user-buttons" value="restart" onClick={handleNavigation}>restart</button>
       <button className="user-buttons" value="back" onClick={handleNavigation}>back</button>

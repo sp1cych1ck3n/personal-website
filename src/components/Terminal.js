@@ -6,7 +6,7 @@ import Typewriter from 'typewriter-effect/dist/core';
 
 function Terminal({ data }) {
     const navigate = useNavigate();
-    const [button, setButtonInput] = useState(null);
+    const [setButtonInput] = useState(null);
     const [message, setMessage] = useState({ output: '' });
     const outputRef = useRef(null);
     const [hasStarted, setHasStarted] = useState(false);
